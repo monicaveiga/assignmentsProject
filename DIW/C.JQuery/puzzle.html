@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>MiniPuzzle</title>
+    <link rel="stylesheet" href="css/puzzleStyle.css">
+    <link rel="icon" type="image/png" href="img/necmaid.jpg">
+</head>
+<body>
+    <div>
+        <h1>Arrastra las piezas de la imagen hasta los cuadrados para completar el puzzle</h1>
+    </div>
+    <img id="img1" src="img/necm1.jpg">
+    <img id="img2" src="img/necm2.jpg">
+    <img id="img3" src="img/necm3.jpg">
+    <img id="img4" src="img/necm4.jpg">
+    <div id="container">
+        <div class="dropzone" id="dropzone0"></div>
+        <div class="dropzone" id="dropzone1"></div>
+        <div class="dropzone" id="dropzone2"></div>
+        <div class="dropzone" id="dropzone3"></div>
+    </div>
+    <p class="two">Ojo, si los cuadrados debajo están azules quiere decir que la pieza no está bien posicionada! </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/puzzle.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Generador palabras dos sílabas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/words.jpg">
+    <link rel="stylesheet" href="css/wordgeneratorStyle.css">
+</head>
+<body>
+    <header>
+        <h1>Generador de palabras aleatorias de dos sílabas</h1>
+    </header>
+    <div class="card">
+        <h3> Genera palabras aleatorias </h3>
+        <p class="textcard cero"></p>
+        <button id="xerar1">Generar</button>
+    </div>
+    <div class="card1">
+    <h3> Genera combinaciones aleatorias a partir una lista de sílabas iniciales y otra de sílabas finales</h3>
+    <p class="textcard uno"></p>
+    <button id="xerar2">Generar</button>
+</div>
+<div class="card2">
+    <h3> Genera combinaciones aleatorias con una sola lista de sílabas</h3>
+    <p class="textcard dos"></p>
+    <button id="xerar3">Generar</button>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('#xerar1').click(function () {
+            var palabras = ['armar', 'portal', 'lápiz', 'tomar', 'volcán', 'cascos', 'gafas', 'libro', 'papel', 'lavar', 'pensar', 'mesa', 'saber', 'campo', 'lino', 'vaso', 'vela', 'leve', 'rojo', 'luna'];
+            var palabra = (palabras[Math.trunc(Math.random() * 20)]).toString();
+            $('.textcard.cero').text(palabra);
+        });
+        $('#xerar2').click(function () {
+            var silabas1 = ['co', 'ca', 'la', 'mo', 'di'];
+            var silabas2 = ['me', 'la', 'na', 'ver'];
+            var $silaba1 = silabas1[Math.trunc(Math.random() * 5)];
+            var $silaba2 = silabas2[Math.trunc(Math.random() * 4)];
+            var palabra = ($silaba1 + $silaba2).toString();
+            $('.textcard.uno').text(palabra);
+        });
+        $('#xerar3').click(function () {
+            var silabas = ['co', 'ca', 'la', 've', 'di', 'a', 'me', 'la', 'na', 'ber', 'ver', 'po'];
+            var palabra = (silabas[Math.trunc(Math.random() * 12)] + silabas[Math.trunc(Math.random() * 12)]).toString();
+            $('.textcard.dos').text(palabra);
+        });
+    </script>
+</body>
+</html>

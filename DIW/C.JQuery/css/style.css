@@ -1,0 +1,40 @@
+
+p.icono i, div.icono span{
+   position: absolute;
+   right: 20px;
+   /* margin-right: 30px; */
+   text-align: right;
+   /* padding-right: 30px; */
+}
+div.card{
+    margin-bottom: 50px;
+}
+.icono:hover{
+    cursor: pointer;
+}
+div.card.col-lg-8.ordear{
+    padding-top: 10px;
+    /* margin-bottom: 20px; */
+}
+.card.form-group input{
+    width: 200px;
+}
+header{
+    margin-top: 50px;
+    margin-bottom: 50px;    
+}
+div.card-img-top p{
+    text-align: right;
+}
+div.card-body p span{
+    text-align: right;
+    position: absolute;
+    right: 20px;
+}
+div.card input{
+    margin-left: 20px;
+    border-radius: 10px;
+}
+.icono.pechar{
+    text-align: right;
+}

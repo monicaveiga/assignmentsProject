@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>My PhoneBook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/icona.png">
+</head>
+<body>
+    <div id="container" class="container col-lg-5">
+        <header>
+            <h1>Agenda telefónica</h1>
+        </header>
+        <div class="card  col-lg-8 ordear">
+            <p class="dropdown-item" >Ordenar por
+                <select name="ordear" id="ordear">
+                    <option value="nombre">Nombre</option>
+                    <option value="telefono">Telefono</option>
+                </select>
+            </p>
+            <button type="submit" class="btn btn-dark" style="width: 100px; margin-bottom: 15px;" class="ordearbutton" id="ordearbutton">Ordear</button>
+        </div>
+        <div id="manolo" class="card col-lg-8 contactinfo">
+            <div class="card-img-top">
+                <div class="icono" style="margin-top: 10px;margin-right: 10px;"> <img src="img/icona.png" alt="persoa"
+                        style="width: 50px;margin-top: 10px;margin-left: 20px;"> <span class="col-lg-1-md-1-sm-2"><i
+                            class="fas fa-edit"></i><span class="eliminar col-sm-2"><i class="fas fa-trash"></i></span></div>
+            </div>
+            <div class="card-body">
+                <p class="name">Manolo
+                </p>
+                <p class="phone">981662183 
+                </p>
+            </div>
+        </div>
+        <div id="ramon" class="card col-lg-8 contactinfo">
+            <div class="card-img-top">
+                <div class="icono" style="margin-top: 10px;margin-right: 10px;"> <img src="img/icona.png" alt="persoa"
+                        style="width: 50px;margin-top: 10px;margin-left: 20px;"> <span class="col-lg-1-md-1-sm-2"><i
+                            class="fas fa-edit"></i><span class="eliminar col-sm-2"><i class="fas fa-trash"></i></span></div>
+            </div>
+            <div class="card-body">
+                <p class="name">Ramon
+                </p>
+                <p class="phone">652567898 
+                </p>
+            </div>
+        </div>
+        <div id="josefina" class="card col-lg-8 contactinfo">
+            <div class="card-img-top">
+                <div class="icono" style="margin-top: 10px;margin-right: 10px;"> <img src="img/icona.png" alt="persoa"
+                        style="width: 50px;margin-top: 10px;margin-left: 20px;"> <span class="col-lg-1-md-1-sm-2"><i
+                            class="fas fa-edit"></i><span class="eliminar col-sm-2"><i class="fas fa-trash"></i></span></div>
+            </div>
+            <div class="card-body">
+                <p class="name">Josefina
+                </p>
+                <p class="phone">665789876 
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-a11y="true"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/phonebook.js"></script>
+</body>
+</html>
