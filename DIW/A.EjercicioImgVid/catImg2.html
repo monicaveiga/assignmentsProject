@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pio's Book</title>
+    <meta name="description" content="Pio the Cat's Pictures">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/catStyleSheet.css">
+    <style>
+        .kittenGallery {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        /* .imgs{
+            width: 500px;
+            height: 500px;
+        } */
+    </style>
+</head>
+
+<body style="background-image: url(img/pinkWood.jpg); background-repeat: no-repeat; background-size: cover;">
+    <header class="cats">
+        <nav>
+            <ul>
+                <li class="active"><a>Home</a></li>
+                <li><a href="catImg.html">Book Escalado</a></li>
+                <li><a href="catImg2.html">Book sin Escalar</a></li>
+            </ul>
+        </nav>
+        <h1>Book de Pío</h1>
+        <h3>Observa las fotos de diferentes formatos y tamaños sin escalar, cuyo tamaño en la página está regulado
+            mediante css, y pulsa para verlas en tamaño original</h3>
+    </header>
+    <div class="container" style="margin-top: 100px;">
+        <div class="kittenGallery">
+            <div class="imgs2" style="background-image: url(img/pio9.png);" onclick="openModal();currentSlide(1)"
+                alt="pio's pic">
+                <!-- <a><img src="pio9.png"  sizes="200px, 300px" onclick="openModal();currentSlide(1)" alt="pio's pic" title="png"></a> -->
+            </div>
+            <div class="imgs2" style="background-image: url(img/pio6.png);" onclick="openModal();currentSlide(2)"
+                alt="pio's pic">
+                <!-- <a><img src="pio6.png" onclick="openModal();currentSlide(2)" alt="pio's pic" title="png"></a> -->
+            </div>
+            <div class="imgs2" style="background-image: url(img/pio7.jpg);" onclick="openModal();currentSlide(3)"
+                alt="pio's pic">
+                <!-- <a><img src="pio7.jpg" onclick="openModal();currentSlide(3)" alt="pio's pic" title="jpg"></a> -->
+            </div>
+            <div class="imgs2" style="background-image: url(img/pio8.png);" onclick="openModal();currentSlide(4)"
+                alt="pio's pic">
+                <!-- <img src="pio8.png" onclick="openModal();currentSlide(4)" alt="pio's pic" title="png"> -->
+            </div>
+            <div class="imgs2" style="background-image: url(img/pio1b.jpg);" onclick="openModal();currentSlide(5)"
+                alt="pio's pic">
+                <!-- <a><img src="pio1b.jpg" onclick="openModal();currentSlide(5)" alt="pio's pic" title="jpg"></a> -->
+            </div>
+            <div class="imgs2" style="background-image: url(img/pio2.gif);" onclick="openModal();currentSlide(6)"
+                alt="pio's pic">
+                <!-- <img src="pio2.gif" onclick="openModal();currentSlide(6)" alt="pio's pic" title="gif"> -->
+            </div>
+            <div class="imgs2" style="background-image: url(img/pio3.gif);" onclick="openModal();currentSlide(7)"
+                alt="pio's pic">
+                <!-- <a><img src="pio3.gif" onclick="openModal();currentSlide(7)" alt="pio's pic" title="gif"></a> -->
+            </div>
+            <div class="imgs2" style="background-image: url(img/pio5jbig.jpg);" onclick="openModal();currentSlide(8)"
+                alt="pio's pic">
+                <!-- <img src="pio5jbig.jpg" onclick="openModal();currentSlide(9)" alt="pio's pic" title="gif"> -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <a href="#">Aviso legal</a> <a href="#">Política de privacidad</a>
+    </footer>
+    <div id="myModal" class="modal" style="background-image: url(img/pinkWood.jpg); background-repeat: no-repeat; background-size: cover;">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <img src="img/pio9j.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio1p.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="img/pio8.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio2.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio7.gif" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="img/pio1b.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio5gbig.gif" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio5jbig.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio5jbig.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="img/pio5pbig.png" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <footer style="z-index: 1;">
+            <a href="#">Aviso legal</a> <a href="#">Política de privacidad</a>
+        </footer>
+
+        <script>
+
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+
+            }
+        </script>
+</body>
+
+</html>

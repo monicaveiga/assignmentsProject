@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Audio</title>
+    <meta name="description" content="audios">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/catStyleSheet.css">
+</head>
+
+<!-- <body style="display: flex; flex-direction: column;"> -->
+   <body style="background-image: url(img/pinkWood.jpg); background-repeat: no-repeat; background-size: cover;">
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a>Home</a></li>
+                <li><a href="reproductor.html">Reproductor</a></li>
+                <li><a href="videos.html">  Videos </a> </li>
+                <li><a href="audio.html">  Audio </a> </li>
+            </ul>
+        </nav>
+        <h1>Audios en diferentes formatos</h1>
+    </header>
+    <div class="container rep audio">
+    <h3>Formatos mp3 y flac</h3>
+    <audio class="audio" controls>
+        <source autoplay preload="auto" src="audio/bip_bip.mp3" type="audio/mpeg">
+        <source src="audio/bip_bip1.flac" type="audio/flac">
+        Your browser does not support the audio element.
+    </audio>
+    <h3>Formatos ogg y mp3</h3>
+    <audio class="audio" controls>
+        <source src="audio/netflix1.ogg" type="audio/ogg">
+        <source preload="auto" src="audio/netflix.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</div>
+<footer>
+    <a href="#">Aviso legal</a> <a href="#">Política de privacidad</a>
+</footer>
+</body>
+
+</html>

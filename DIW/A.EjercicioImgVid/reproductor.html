@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reproductor JS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/catStyleSheet.css">
+</head>
+
+<body style="background-image: url(img/pinkWood.jpg); background-repeat: no-repeat; background-size: cover;">
+    <header>
+        <nav>
+            <ul>
+                <li class="active"><a>Home</a></li>
+                <li><a href="reproductor.html">Reproductor</a></li>
+                <li><a href="videos.html">  Videos </a> </li>
+                <li><a href="audio.html">  Audio </a> </li>
+            </ul>
+        </nav>
+        <h1>Reproductor de Vídeo con Javascript</h1>
+    </header>
+    <div class="container rep">
+        <video id="video" class="video" width="100%" height="auto">
+            <source id="mp4" src="videos/cat1.4.mp4" type="video/mp4">
+            <source id="webm" src="videos/cat3.webm" type="video/webm">
+            <source id="ogg" src="videos/cat3.ogg" type="video/ogg">
+        </video>
+        <div class="buttons">
+            <button onclick="play()"><i class="fas fa-play-circle"></i></button> <button onclick="pause()"><i
+                    class="fas fa-pause-circle"></i></button> <button onclick="stop()"><i
+                    class="fas fa-stop-circle"></i></button> <button onclick="volUp()"> <i class="fas fa-volume-up"></i>
+            </button> <button onclick="volDown()"><i class="fas fa-volume-down"></i> </button> <button onclick="mute()">
+                <i class="fas fa-volume-mute"></i> </button> <button onclick="back()"> <i
+                    class="fas fa-fast-backward"></i> </button> <button onclick="forth()"> <i
+                    class="fas fa-fast-forward"></i> </button>
+            <select name="formato" id="formato" onclick="selectFormato()">
+                <option value="1" selected>MP4</option>
+                <option value="2">WebM</option>
+                <option value="3">OGG</option>
+            </select>
+        </div>
+    </div>
+    <footer>
+        <a href="#">Aviso legal</a> <a href="#">Política de privacidad</a>
+    </footer>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" data-auto-a11y="true"></script>
+    <script>
+        var rep = document.getElementById("video");
+        var volume = rep.volume;
+        var formato = document.getElementById("formato");
+        function play() {
+            rep.play();
+        }
+        function pause() {
+            rep.pause();
+        }
+        function stop() {
+            rep.pause();
+            rep.currentTime = 0;
+        }
+        function volUp() {
+            if (rep.muted == true)
+                rep.muted = false;
+            volume += 0.1;
+        }
+        function volDown() {
+            volume -= 0.1;
+        }
+        function mute() {
+            rep.muted = true;
+        }
+        function mute() {
+            rep.muted = true;
+        }
+        function back() {
+            rep.currentTime -= 5;
+            // if (time < 0)
+            //     time = 0;
+        }
+        function forth() {
+            rep.currentTime += 5;
+        }
+        function selectFormato() {
+            var format = formato.value;
+            if (format == 1) {
+                document.getElementById("mp4").src = "videos/cat1.4.mp4";
+                rep.load()
+            }
+            else if (format == 2) {
+                document.getElementById("webm").src = "videos/cat3.webm";
+                rep.load();
+            }
+            else {
+                document.getElementById("ogg").src = "videos/cat3.ogg";
+                rep.load();
+            }
+
+        }
+    </script>
+</body>
+
+</html>
