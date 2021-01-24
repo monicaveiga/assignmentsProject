@@ -1,0 +1,29 @@
+/* canvas{
+    position: relative;
+} */
+div#containerXeral{
+    display: flex;
+    flex-direction: row;
+}
+html{
+    background-color: black;
+}
+div.container {
+    /* box-shadow:
+ 20px 5px 40px #CF77F3,
+   0px 5px 40px #009BFF,
+  -20px 5px 40px #2AC9DB; */
+    display: flex;
+    height: 450px;
+    width: 200px;
+    flex-direction: column;
+}
+div.container.primeiro{
+    margin-left: 15%;
+}
+video{
+    box-shadow: inset 0px 0px 36px 36px rgba(0,0,0,0.75);
+}
+canvas.right{
+    transform: scaleX(-1);
+}

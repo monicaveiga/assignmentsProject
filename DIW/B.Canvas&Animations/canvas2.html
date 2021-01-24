@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/canvasStyle.css">
+</head>
+
+<body>
+    <div id="containerXeral">
+        <div class="container">
+            <canvas id="canvas1" width="100" height="100">
+            </canvas>
+            <canvas id="canvas2" width="100" height="100">
+            </canvas>
+            <canvas id="canvas3" width="100" height="100">
+            </canvas>
+            <canvas id="canvas4" width="100" height="100">
+            </canvas>
+        </div>
+        <video id="video" src="video/Cat1.4.mp4" controls="false"></video>
+        <div class="container">
+            <canvas id="canvas5" class="right" width="100" height="100">
+            </canvas>
+            <canvas id="canvas6" class="right" width="100" height="100">
+            </canvas>
+            <canvas id="canvas7" class="right" width="100" height="100">
+            </canvas>
+            <canvas id="canvas8" class="right" width="100" height="100">
+            </canvas>
+        </div>
+    </div>
+    <script>
+
+        var canvas1 = document.getElementById('canvas1');
+        var canvas2 = document.getElementById('canvas2');
+        var canvas3 = document.getElementById('canvas3');
+        var canvas4 = document.getElementById('canvas4');
+        var canvas5 = document.getElementById('canvas5');
+        var canvas6 = document.getElementById('canvas6');
+        var canvas7 = document.getElementById('canvas7');
+        var canvas8 = document.getElementById('canvas8');
+        var ctx = canvas1.getContext('2d');
+        var ctx2 = canvas2.getContext('2d');
+        var ctx3 = canvas3.getContext('2d');
+        var ctx4 = canvas4.getContext('2d');
+        var ctx5 = canvas5.getContext('2d');
+        var ctx6 = canvas6.getContext('2d');
+        var ctx7 = canvas7.getContext('2d');
+        var ctx8 = canvas8.getContext('2d');
+        var video = document.getElementById('video');
+        video.addEventListener('play', function () {
+            var $this = this; //cache
+            (function loop() {
+                width = 100,
+                    height = 80,
+                    posX = 100,
+                    posY = 80;
+                if (!$this.paused && !$this.ended) {
+                    
+
+                    ctx.fillStyle = 'black';
+                ctx.fillRect(0, 0, 500, 500);
+                ctx.lineWidth = 20;
+                ctx.strokeStyle = 'white';
+                ctx.shadowColor = '#fcf7d2';
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+                ctx.shadowBlur = 50;
+                for (a = 0; a < 10; a++) {
+                    ctx.beginPath();
+                    ctx.arc(250, 250, 200, Math.PI / 12, 23 * Math.PI / 12);
+                    ctx.stroke();
+                    ctx.beginPath();
+                    ctx.arc(250, 250, 100, 7 * Math.PI / 12, 5 * Math.PI / 12);
+                    ctx.stroke();
+                }
+
+
+                    // ctx1.rect(-width, -height, width, height);
+                    // ctx1.shadowColor = '#fcf7d2';
+                    // ctx1.shadowBlur = 60;
+                    // ctx1.shadowOffsetX = width + posX;
+                    // ctx1.shadowOffsetY = height + posY;
+                    // ctx1.fill();
+                    ctx2.rect(-width, -height, width, height);
+                    ctx2.shadowColor = '#fcf7d2';
+                    ctx2.shadowBlur = 60;
+                    ctx2.shadowOffsetX = width + posX;
+                    ctx2.shadowOffsetY = height + posY;
+                    ctx2.fill();
+                    ctx3.rect(-width, -height, width, height);
+                    ctx3.shadowColor = '#fcf7d2';
+                    ctx3.shadowBlur = 60;
+                    ctx3.shadowOffsetX = width + posX;
+                    ctx3.shadowOffsetY = height + posY;
+                    ctx3.fill();
+                    ctx4.rect(-width, -height, width, height);
+                    ctx4.shadowColor = '#fcf7d2';
+                    ctx4.shadowBlur = 60;
+                    ctx4.shadowOffsetX = width + posX;
+                    ctx4.shadowOffsetY = height + posY;
+                    ctx4.fill();
+                    ctx5.rect(-width, -height, width, height);
+                    ctx5.shadowColor = '#fcf7d2';
+                    ctx5.shadowBlur = 60;
+                    ctx5.shadowOffsetX = width + posX;
+                    ctx5.shadowOffsetY = height + posY;
+                    ctx5.fill();
+                    ctx6.rect(-width, -height, width, height);
+                    ctx6.shadowColor = '#fcf7d2';
+                    ctx6.shadowBlur = 60;
+                    ctx6.shadowOffsetX = width + posX;
+                    ctx6.shadowOffsetY = height + posY;
+                    ctx6.fill();
+                    ctx7.rect(-width, -height, width, height);
+                    ctx7.shadowColor = '#fcf7d2';
+                    ctx7.shadowBlur = 60;
+                    ctx7.shadowOffsetX = width + posX;
+                    ctx7.shadowOffsetY = height + posY;
+                    ctx7.fill();
+
+                    ctx8.rect(-width, -height, width, height);
+                    ctx8.shadowColor = '#fcf7d2';
+                    ctx8.shadowBlur = 60;
+                    ctx8.shadowOffsetX = width + posX;
+                    ctx8.shadowOffsetY = height + posY;
+                    ctx8.fill();
+
+                    setTimeout(loop, 1000 / 30); // drawing at 30fps
+                }
+            })();
+        }, 0);
+    </script>
+</body>
+
+</html>

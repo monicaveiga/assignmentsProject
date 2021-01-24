@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/canvasStyle3.css">
+</head>
+
+<body>
+    <div id="containerXeral">
+        <div class="container primeiro">
+            <canvas id="canvas1" width="50" height="450">
+            </canvas>
+            <!-- <canvas id="canvas2" width="100" height="100">
+            </canvas>
+            <canvas id="canvas3" width="100" height="100">
+            </canvas>
+            <canvas id="canvas4" width="100" height="100">
+            </canvas> -->
+        </div>
+        <video id="video" src="video/trees.mp4" height="450" controls="false"></video>
+        <div class="container segundo">
+            <canvas id="canvas5" class="right" width="50" height="450">
+            </canvas>
+            <!-- <canvas id="canvas6" class="right" width="100" height="100">
+            </canvas>
+            <canvas id="canvas7" class="right" width="100" height="100">
+            </canvas>
+            <canvas id="canvas8" class="right" width="100" height="100">
+            </canvas> -->
+        </div>
+    </div>
+    <script>
+
+        var canvas1 = document.getElementById('canvas1');
+
+        var canvas5 = document.getElementById('canvas5');
+
+        var ctx = canvas1.getContext('2d');
+        var ctx5 = canvas5.getContext('2d');
+        var video = document.getElementById('video');
+        video.addEventListener('play', function () {
+            var $this = this; //cache
+            (function loop() {
+                width = 100,
+                    height = 80,
+                    posX = 100,
+                    posY = 80;
+                if (!$this.paused && !$this.ended) {
+                    ctx.fillStyle = 'black';
+                    ctx.fillRect(0, 0, 500, 500);
+                    ctx.lineWidth = 20;
+                    ctx.shadowOffsetX = 0;
+                    ctx.shadowOffsetY = 0;
+                    ctx.shadowBlur = 50;
+                    for (a = 0; a < 10; a++) {
+                        ctx.beginPath();
+                        // ctx.arc(250, 250, 300, Math.PI / 12, 23 * Math.PI / 12);
+                        ctx.arc(250, 250, 200, Math.PI / 12, 23 * Math.PI / 12);
+                        ctx.stroke();
+                        ctx.beginPath();
+                        ctx.arc(250, 250, 100, 7 * Math.PI / 12, 5 * Math.PI / 12);
+                        ctx.stroke();
+                    }
+                    ctx5.fillStyle = 'black';
+                    ctx5.fillRect(0, 0, 500, 500);
+                    ctx5.lineWidth = 20;
+                    ctx5.shadowOffsetX = 0;
+                    ctx5.shadowOffsetY = 0;
+                    ctx5.shadowBlur = 50;
+                    for (a = 0; a < 10; a++) {
+                        ctx5.beginPath();
+                        ctx5.arc(250, 250, 200, Math.PI / 12, 23 * Math.PI / 12);
+                        ctx5.stroke();
+                        ctx5.beginPath();
+                        ctx5.arc(250, 250, 100, 7 * Math.PI / 12, 5 * Math.PI / 12);
+                        ctx5.stroke();
+                    }
+                    if (video.currentTime < 2) {
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#CDF5B2';
+                        ctx5.strokeStyle = '#F1F4DA';
+                        ctx5.shadowColor = '#CDF5B2';
+                    } else if (video.currentTime > 2 && video.currentTime < 4) {
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#F4D5BE';
+                        ctx5.strokeStyle = '#white';
+                        ctx5.shadowColor = '#F4D5BE';
+                    } else if (video.currentTime > 4 && video.currentTime < 6) {
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#F2D3D3';
+                        ctx5.strokeStyle = '#white';
+                        ctx5.shadowColor = '#F2D3D3';      
+                    } else if (video.currentTime > 6 && video.currentTime < 8) {
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#DCF2F3';    
+                        ctx5.strokeStyle = '#white';
+                        ctx5.shadowColor = '#DCF2F3'; 
+                    } else if (video.currentTime > 8 && video.currentTime < 10) {
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#F2D5CC'; 
+                        ctx5.strokeStyle = '#white';
+                        ctx5.shadowColor = '#F2D5CC';  
+                    }else if (video.currentTime > 10 && video.currentTime < 12){
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#DECEC5';
+                        ctx5.strokeStyle = '#white';
+                        ctx5.shadowColor = '#DECEC5';
+                    }else if (video.currentTime > 12){
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#DDE4FC';
+                        ctx5.strokeStyle = '#white';
+                        ctx5.shadowColor = '#DDE4FC';
+                    }
+                    setTimeout(loop, 1000 / 30); // drawing at 30fps
+                }
+            })();
+        }, 0);
+    </script>
+</body>
+
+</html>

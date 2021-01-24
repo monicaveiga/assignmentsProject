@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/canvasStyle3.css">
+</head>
+
+<body>
+    <div id="containerXeral">
+        <div class="container primeiro">
+            <canvas id="canvas1" width="50" height="450">
+            </canvas>
+            <!-- <canvas id="canvas2" width="100" height="100">
+            </canvas>
+            <canvas id="canvas3" width="100" height="100">
+            </canvas>
+            <canvas id="canvas4" width="100" height="100">
+            </canvas> -->
+        </div>
+        <video id="video" src="video/Cat1.4.mp4" controls="false"></video>
+        <div class="container segundo">
+            <canvas id="canvas5" class="right" width="50" height="450">
+            </canvas>
+            <!-- <canvas id="canvas6" class="right" width="100" height="100">
+            </canvas>
+            <canvas id="canvas7" class="right" width="100" height="100">
+            </canvas>
+            <canvas id="canvas8" class="right" width="100" height="100">
+            </canvas> -->
+        </div>
+    </div>
+    <script>
+
+        var canvas1 = document.getElementById('canvas1');
+
+        var canvas5 = document.getElementById('canvas5');
+
+        var ctx = canvas1.getContext('2d');
+        var ctx5 = canvas5.getContext('2d');
+        var video = document.getElementById('video');
+        video.addEventListener('play', function () {
+            var $this = this; //cache
+            (function loop() {
+                width = 100,
+                    height = 80,
+                    posX = 100,
+                    posY = 80;
+                if (!$this.paused && !$this.ended) {
+                    ctx.fillStyle = 'black';
+                    ctx.fillStyle = 'black';
+                    ctx.fillRect(0, 0, 500, 500);
+                    ctx.lineWidth = 20;
+
+                    ctx.shadowOffsetX = 0;
+                    ctx.shadowOffsetY = 0;
+                    ctx.shadowBlur = 50;
+
+                    ctx5.fillStyle = 'black';
+                    ctx5.fillRect(0, 0, 500, 500);
+                    ctx5.lineWidth = 20;
+
+                    ctx5.shadowOffsetX = 0;
+                    ctx5.shadowOffsetY = 0;
+                    ctx5.shadowBlur = 50;
+
+                    if (video.currentTime < 2) {
+                        for (a = 0; a < 10; a++) {
+                        ctx.beginPath();
+                        ctx.arc(250, 250, 220, Math.PI / 12, 100 * Math.PI / 12);
+                        // ctx.arc(250, 250, 300, Math.PI / 12, 23 * Math.PI / 12);
+                        ctx.stroke();
+                        ctx.beginPath();
+                        ctx.arc(250, 250, 300, 7 * Math.PI / 12, 25 * Math.PI / 12);
+                        // ctx.arc(250, 250, 200, 7 * Math.PI / 120, 100 * Math.PI / 12);
+                        ctx.stroke();
+                    }for (a = 0; a < 10; a++) {
+                        ctx5.beginPath();
+                        // ctx5.arc(250, 250, 300, Math.PI / 12, 23 * Math.PI / 12);
+                        ctx5.arc(250, 250, 220, Math.PI / 12, 100 * Math.PI / 12);
+                        ctx5.stroke();
+                        ctx5.beginPath();
+                        // ctx5 .arc(250, 250, 200, 7 * Math.PI / 120, 100 * Math.PI / 12);
+                        ctx5.arc(250, 250, 300, 7 * Math.PI / 12, 25 * Math.PI / 12);
+                        ctx5.stroke();
+                    }
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#fcf7d2';
+                        ctx5.strokeStyle = 'white';
+                        ctx5.shadowColor = '#fcf7d2';
+                    } else if (video.currentTime > 2 && video.currentTime < 4) {
+                        for (a = 0; a < 10; a++) {
+                        ctx.beginPath();
+                        ctx.arc(250, 250, 300, Math.PI / 12, 23 * Math.PI / 12);
+                        ctx.stroke();
+                        ctx.beginPath();
+                        ctx.arc(250, 250, 200, 7 * Math.PI / 120, 100 * Math.PI / 12);
+                        ctx.stroke();
+                    }for (a = 0; a < 10; a++) {
+                        ctx5.beginPath();
+                        ctx5.arc(250, 250, 300, Math.PI / 12, 23 * Math.PI / 12);
+                        // ctx5.arc(250, 250, 220, Math.PI / 12, 100 * Math.PI / 12);
+                        ctx5.stroke();
+                        ctx5.beginPath();
+                        ctx5 .arc(250, 250, 200, 7 * Math.PI / 120, 100 * Math.PI / 12);
+                        // ctx5.arc(250, 250, 300, 7 * Math.PI / 12, 25 * Math.PI / 12);
+                        ctx5.stroke();
+                    }
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#A8DCDE';
+                        ctx5.strokeStyle = 'white';
+                        ctx5.shadowColor = '#A8DCDE';
+                    }else if (video.currentTime > 4 && video.currentTime <= 6) {
+                        for (a = 0; a < 10; a++) {
+                        ctx.beginPath();
+                        ctx.arc(250, 250, 220, Math.PI / 12, 100 * Math.PI / 12);
+                        // ctx.arc(250, 250, 300, Math.PI / 12, 23 * Math.PI / 12);
+                        ctx.stroke();
+                        ctx.beginPath();
+                        ctx.arc(250, 250, 300, 7 * Math.PI / 12, 25 * Math.PI / 12);
+                        // ctx.arc(250, 250, 200, 7 * Math.PI / 120, 100 * Math.PI / 12);
+                        ctx.stroke();
+                    }for (a = 0; a < 10; a++) {
+                        ctx5.beginPath();
+                        // ctx5.arc(250, 250, 300, Math.PI / 12, 23 * Math.PI / 12);
+                        ctx5.arc(250, 250, 220, Math.PI / 12, 100 * Math.PI / 12);
+                        ctx5.stroke();
+                        ctx5.beginPath();
+                        // ctx5 .arc(250, 250, 200, 7 * Math.PI / 120, 100 * Math.PI / 12);
+                        ctx5.arc(250, 250, 300, 7 * Math.PI / 12, 25 * Math.PI / 12);
+                        ctx5.stroke();
+                    }
+                        ctx.strokeStyle = 'white';
+                        ctx.shadowColor = '#FFFBC8';
+                        ctx5.strokeStyle = 'white';
+                        ctx5.shadowColor = '#FFFBC8';
+                    }
+                    setTimeout(loop, 1000 / 30); // drawing at 30fps
+                }
+            })();
+        }, 0);
+    </script>
+</body>
+
+</html>
