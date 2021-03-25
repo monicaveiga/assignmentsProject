@@ -13,3 +13,5 @@ La última parte del proyecto, assignmentsProject/DPAW/practica/, a diferencia d
 
 Se puede encontrar una documentación completa de la creación de los ficheros de configuración de esta última práctica en: 
 https://sites.google.com/view/wikiejerciciosmonicaveiga/pr%C3%A1ctica-final?authuser=0
+
+También se puede encontrar uno de los trabajos del módulo de Diseño de interfaces subido a Codepen: https://codepen.io/hermenegildacode/pen/ZEpMYXa
